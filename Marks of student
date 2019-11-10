@@ -1,0 +1,74 @@
+package test;
+import java.util.Scanner;
+public class Marks {
+
+	public static void main(String[] args) {
+		int  marks[]=new int[10];
+
+        String Grade="";
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter the marks of ten students :");
+
+        for(int i=0;i<10;i++)
+
+        {
+
+                    marks[i]=sc.nextInt();
+
+        }
+        System.out.println( "marks     Grade");
+
+        for(int i=0;i<10;i++)
+
+        {
+
+                    for(int j=i+1;j<10;j++)
+
+                    {
+
+                                if( marks[i]> marks[j])
+
+                                 {
+
+                                            int temp= marks[i];
+
+                                             marks[i]= marks[j];
+
+                                             marks[j]=temp;
+
+                                 }
+
+                    }
+                   
+
+        if( marks[i]>=40 && marks[i]<=50)
+        {
+
+        Grade="PASS";
+        }
+
+        else if( marks[i]>=51 && marks[i]<=75)
+        {
+
+        Grade="MERIT";
+        }
+
+        else if(marks[i]>75)
+        {
+        Grade="DISTINCTION";
+
+        }else
+        {
+         Grade="FAIL";
+        }
+      
+        System.out.println( marks[i]+"    "+Grade);
+    
+        }
+	}
+}
+
+
+
